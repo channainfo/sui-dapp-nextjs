@@ -2,7 +2,7 @@ import { ConnectButton, useWallet } from "@suiet/wallet-kit";
 import WalletInfo from "./wallet_info";
 
 
-const AppNav = () => {
+const AppHeader = () => {
 
   let wallet = useWallet()
 
@@ -18,4 +18,4 @@ const AppNav = () => {
   )
 }
 
-export default AppNav;
+export default AppHeader;

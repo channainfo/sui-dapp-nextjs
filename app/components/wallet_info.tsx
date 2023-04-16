@@ -1,13 +1,12 @@
 import { WalletContextState } from "@suiet/wallet-kit";
-import { AppProps } from "next/app";
 
 type WalletProps = {
-  wallet: WalletContextState;
+  wallet: WalletContextState,
 }
 
 const WalletInfo = ({ wallet }: WalletProps) => {
   return (
-    <div>Connected: {wallet.address}</div>
+    <div>Connected: {wallet.address} ({wallet.chain?.name} - {wallet.chain?.rpcUrl})</div>
   )
 }
 
