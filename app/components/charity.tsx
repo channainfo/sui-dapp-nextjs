@@ -1,5 +1,6 @@
 import { TransactionBlock } from "@mysten/sui.js"
 import { useAccountBalance, useWallet } from "@suiet/wallet-kit"
+import Link from "next/link"
 import { ChangeEvent, useState } from "react"
 
 
@@ -96,13 +97,26 @@ const Charity = () => {
       {w.connected ? <div> Yes {w.address} </div> : <div> No {w.connected}</div>}
       <div> Wallet balance: SUI {String(balance)} </div>
       <input className="enabled:hover:border-gray-400 disabled:opacity-75 rounded-md p-2" value={fund} onChange={handleSetFund} />
+
+      <br />
+      <br />
+
       <button className={`rounded-md bg-green-600 hover:bg-green-800 text-white px-3 py-2 ml-2 ${submittable ? '' : 'bg-gray-50 text-gray-800'}`} onClick={handleSendFund} disabled={!submittable}> Send </button>
       <button className={`rounded-md bg-green-600 hover:bg-green-800 text-white px-3 py-2 ml-2`} onClick={handleCreateAccount}> Create Account </button>
 
       <br />
+      <br />
 
       <button className="rounded-md bg-green-600 hover:bg-green-800 text-white px-3 py-2 ml-2" onClick={handleRunContract}> Run Contract </button>
       <button className="rounded-md bg-green-600 hover:bg-green-800 text-white px-3 py-2 ml-2" onClick={handleSignMessage}> Sign Message </button>
+
+      <br />
+      <br />
+
+      <div>
+        <Link href="/profile" className="rounded-md bg-green-600 hover:bg-green-800 text-white px-3 py-2 ml-2"> Profile </Link>
+        <Link href="/donation-tiers" className="rounded-md bg-green-600 hover:bg-green-800 text-white px-3 py-2 ml-2"> Donation Tiers </Link>
+      </div>
 
     </div>
   )

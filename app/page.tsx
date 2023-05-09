@@ -1,6 +1,6 @@
 'use client';
 import { Inter } from 'next/font/google'
-import { Chain, DefaultChains, EthosWallet, SuiDevnetChain, SuiTestnetChain, SuiWallet, SuietWallet, WalletProvider, useWallet } from '@suiet/wallet-kit'
+import { Chain, EthosWallet, SuiDevnetChain, SuiTestnetChain, SuiWallet, SuietWallet, WalletProvider } from '@suiet/wallet-kit'
 import AppHeader from './components/app_header';
 import Charity from './components/charity';
 import NavBar from './components/nav_bar/NavBar';
